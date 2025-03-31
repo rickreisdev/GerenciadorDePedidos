@@ -9,5 +9,4 @@ public class JapacasaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JapacasaApplication.class, args);
 	}
-
 }
