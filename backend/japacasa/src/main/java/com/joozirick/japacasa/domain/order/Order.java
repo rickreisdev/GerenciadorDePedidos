@@ -30,7 +30,7 @@ public class Order {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    private String date;
+    private String order_date;
     private Double total;
     private Double delivery_price;
     private String status;
