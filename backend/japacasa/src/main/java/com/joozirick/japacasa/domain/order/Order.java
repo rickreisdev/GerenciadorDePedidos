@@ -22,7 +22,7 @@ public class Order {
     @GeneratedValue
     private UUID id;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "address_id")
     private Address address;
 
