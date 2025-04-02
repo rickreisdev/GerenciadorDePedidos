@@ -26,5 +26,5 @@ public class Customer {
 
     private String name;
     private String phone;
-    private String date;
+    private String birth_date;
 }
