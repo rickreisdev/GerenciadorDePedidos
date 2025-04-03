@@ -22,13 +22,9 @@ export async function loginUser(email: string, password: string): Promise<LoginR
 
         return response.data;
     } catch (error) {
-        // Você pode personalizar o tratamento de erro aqui
         if (axios.isAxiosError(error) && error.response) {
-            // Erro conhecido do servidor
             throw new Error(error.response.data.message || 'Falha na autenticação');
         }
-
-        // Erro desconhecido
         throw new Error('Erro ao conectar com o servidor. Tente novamente mais tarde.');
     }
 }
@@ -50,7 +46,6 @@ export async function validateToken(token: string): Promise<boolean> {
 
 export async function logoutUser(): Promise<void> {
     localStorage.removeItem('authToken');
-    // Você também pode invalidar o token no servidor, se necessário
 }
 
 export function getAuthToken(): string | null {

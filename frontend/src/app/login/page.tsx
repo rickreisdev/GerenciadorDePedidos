@@ -33,13 +33,8 @@ export default function LoginPage() {
     setError("");
 
     try {
-      // Chamar o serviço de autenticação
       const response = await loginUser(formData.email, formData.password);
-      
-      // Armazenar o token em localStorage ou em um cookie seguro
       localStorage.setItem("authToken", response.token);
-      
-      // Redirecionar para o dashboard
       router.push("/dashboard");
     } catch (err) {
       setError("Credenciais inválidas. Por favor, tente novamente.");
